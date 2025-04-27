@@ -54,7 +54,10 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1 Slowly changing dimension: using this pattern, customer address will be overwritten when it is updated in the database. This would not keep any history for historical values in customer address column.
+
+Type 2 Slowly changing dimension: using this approach would insert a new row for customer address. To maintain this pattern, the older record will need to be updated with an end date to identify it as a historical record.
+
 ```
 
 ***
